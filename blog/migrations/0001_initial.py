@@ -31,7 +31,7 @@ class Migration(migrations.Migration):
                 ('modified_time', models.DateTimeField()),
                 ('excerpt', models.CharField(blank=True, max_length=200)),
                 ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
-                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='myblog.Category')),
+                ('category', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blog.Category')),
             ],
         ),
         migrations.CreateModel(
@@ -44,6 +44,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='post',
             name='tags',
-            field=models.ManyToManyField(blank=True, to='myblog.Tag'),
+            field=models.ManyToManyField(blank=True, to='blog.Tag'),
         ),
     ]
