@@ -3,11 +3,14 @@
 # @Author: 
 # @Date  : 2018/4/15
 # @Desc  :
-from django.conf.urls import url
+# from django.urls import path   2.0版没有path呀？？？
+from django.contrib import admin
+# from django.conf.urls import url
+from django.urls import path
 from . import views
 
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
-
+    path('', views.index, name='index'),
+    # path('admin/', admin.site.urls)
 ]
